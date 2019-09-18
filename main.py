@@ -53,7 +53,7 @@ for line in listOfLines:
 #Add Aliases for chat-tools like :smile: or :kangaroo:
 for emoji in x:
     if "aliases" not in emoji.keys():
-        emoji["aliases"] = emoji["description"][0]
+        emoji["aliases"] = [emoji["description"][0]]
 
 f = open("emoji.json", "w", encoding="utf8")
 f.write(json.dumps(x))
